@@ -1,0 +1,11 @@
+
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name %>
+  <%= f.input :category %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+  <%= link_to"Return", restaurant_path(@restaurant.id), class: "btn btn-warning" %>
+<% end %>
+

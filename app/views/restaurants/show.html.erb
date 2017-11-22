@@ -1,0 +1,12 @@
+<h1>Restaurants Show</h1>
+
+  <%= @restaurant.name %>
+  <p><%= @restaurant.category %></p>
+  <%= @restaurant.address %>
+  <p><%= @restaurant.phone_number %></p>
+<p><%=  link_to "Modify", edit_restaurant_path(@restaurant.id), class: "btn btn-success" %></p>
+<p><%= link_to "Delete", restaurants_path(@restaurant.id),  class: "btn btn-danger",
+    method: :delete,
+    data: { confirm: "Are you sure?" } %></p>
+<%= link_to"Go to the list", restaurants_path, class: "btn btn-primary" %>
+<%= link_to "Review", restaurant_reviews_path(@restaurant.id), class: "btn btn-primary" %>
