@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
 
   before_action :set_review
   def index
-    @review = Review.select { |m| m.restaurant.id == @restaurant.id }
+    @reviews = Review.select { |m| m.restaurant.id == @restaurant.id }
   end
 
   def show
